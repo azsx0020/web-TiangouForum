@@ -2,9 +2,12 @@ package com.tiangouforum.service;
 
 import com.tiangouforum.dao.FrmuserinfDao;
 import com.tiangouforum.domain.Frmuserinf;
+import org.apache.ibatis.jdbc.SQL;
+import org.mybatis.spring.SqlSessionFactoryBean;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.sql.SQLException;
 
 /**
  * @Author Du Yihong
@@ -16,11 +19,13 @@ public class UserService {
     @Resource(name="FrmuserinfDao")
     private FrmuserinfDao frmuserinfDao;
 
+    private String abc;
+
     public void register(Frmuserinf frmuserinf) throws Exception{
         try {
             frmuserinfDao.insert(frmuserinf);
         }catch (Exception e) { //TODO 为框架增加异常处理功能
-            throw e; //runtimeException，可以不必catch的
+             throw e; //runtimeException，可以不必catch的
         }
 
     }
