@@ -27,8 +27,6 @@ bin
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 
-265339
-265339.pub
 
 # Structurizr workspace archives
 *.json
